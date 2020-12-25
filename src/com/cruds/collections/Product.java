@@ -31,13 +31,20 @@ public class Product
 	public void setProductrice(double productrice) {
 		this.productrice = productrice;
 	}
-	@Override
+	
+	
+	public void printDetails()
+	{
+		System.out.println("id:"+ productid + "name :"+productname +"price:" +productrice);
+	}
+
+	@Override//defined in java.lang.obj
 	public int hashCode() {
 		System.out.println("hashcode :" +this.productid);
 		return this.productid;
 	}
 	
-	@Override
+	@Override//defined in java.lang.obj
 	public boolean equals(Object obj) {
 		Product other=(Product)obj;
 		System.out.println("equals--->" + this.productid +"::::" +other.getProductid());
